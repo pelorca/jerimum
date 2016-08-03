@@ -21,4 +21,11 @@ public class ApplicationInitializer extends JerimumWebApplicationInitializer {
         return Application.class;
     }
 
+	@Override
+	public String getEnvironmentJVMParam() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+    
 }
