@@ -12,8 +12,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="data in tableData track by $index">
-				<td data-title="ID">{{$index + 1}}</td>
+			<tr ng-repeat="data in tableData track by ${symbol_dollar}index">
+				<td data-title="ID">{{${symbol_dollar}index + 1}}</td>
 				<td data-title="Issue">{{data.issue}}</td>
 				<td data-title="Status">{{data.status}}</td>
 				<td data-title="Progress"><md-progress-linear

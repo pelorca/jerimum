@@ -17,14 +17,27 @@
 package ${package}.auth;
 
 import org.springframework.core.annotation.Order;
-import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
+
+import br.com.jerimum.fw.config.JerimumWebApplicationInitializer;
 
 /**
- * No customizations of {@link AbstractSecurityWebApplicationInitializer} are necessary.
- *
- * @author Rob Winch
+ * Startup spring application class.
+ * 
+ * @author https://github.com/dalifreire/jerimum
+ * @since 11/2015
  */
-@Order(2)
-public class ApplicationSecurityInitializer extends AbstractSecurityWebApplicationInitializer {
+@Order(1)
+public class ApplicationInitializer extends JerimumWebApplicationInitializer {
+
+    @Override
+    public Class<?> getConfigurationClass() {
+        return Application.class;
+    }
+
+	@Override
+	public String getEnvironmentJVMParam() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

@@ -6,6 +6,7 @@ package ${package}.auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import br.com.jerimum.fw.auth.JerimumDefaultSecurityConfiguration;
 import ${package}.util.Constants;
@@ -20,7 +21,7 @@ import java.util.Map;
 @EnableWebSecurity
 public class SecurityConfiguration extends JerimumDefaultSecurityConfiguration {
 
-    @Autowired
+	@Autowired
     protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication().withUser("user").password("password").roles("USER");
     }
@@ -43,6 +44,18 @@ public class SecurityConfiguration extends JerimumDefaultSecurityConfiguration {
 
 	@Override
 	protected Map<String, String[]> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String getDefaultLoggedPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected PasswordEncoder getPasswordEncoder() {
 		// TODO Auto-generated method stub
 		return null;
 	}
