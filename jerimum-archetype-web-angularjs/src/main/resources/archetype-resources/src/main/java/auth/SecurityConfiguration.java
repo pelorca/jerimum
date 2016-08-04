@@ -51,7 +51,7 @@ public class SecurityConfiguration extends JerimumDefaultSecurityConfiguration {
 	@Override
 	protected String getDefaultLoggedPage() {
 		// TODO Auto-generated method stub
-		return null;
+		return Constants.LOGIN_PAGE;
 	}
 
 	@Override
